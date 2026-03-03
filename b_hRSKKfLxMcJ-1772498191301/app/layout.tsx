@@ -7,8 +7,9 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'LuxeStay Hotel | Luxury Accommodations & Events',
+  description: 'Experience luxury like never before at LuxeStay Hotel. Book your stay in our elegantly appointed rooms and suites, host unforgettable events, and join our exclusive loyalty program.',
+  keywords: 'hotel, luxury hotel, accommodation, booking, events, wedding, conference, spa, dining, loyalty program',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -26,6 +27,11 @@ export const metadata: Metadata = {
       },
     ],
     apple: '/apple-icon.png',
+  },
+  openGraph: {
+    title: 'LuxeStay Hotel | Luxury Accommodations & Events',
+    description: 'Experience luxury like never before at LuxeStay Hotel',
+    type: 'website',
   },
 }
 
