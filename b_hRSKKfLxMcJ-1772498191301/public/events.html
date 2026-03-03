@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Conferences - LuxeStay Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">✦</span>
+                    <h1>LuxeStay</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="rooms.html" class="nav-link">Rooms & Suites</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="loyalty.html" class="nav-link">Rewards</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html#booking" class="nav-link btn-book">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-bg">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=1920&h=600&fit=crop" alt="Events & Conferences">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <span class="page-subtitle">Celebrations & Business</span>
+                <h1>Events & Conferences</h1>
+                <p>Create unforgettable moments in our stunning event spaces</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Events</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Spaces Overview -->
+    <section class="event-spaces">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Venues</span>
+                <h2>Event Spaces</h2>
+                <p>From intimate gatherings to grand celebrations, we have the perfect space for your event</p>
+            </div>
+            
+            <div class="spaces-grid">
+                <div class="space-card" data-aos="fade-up">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=400&fit=crop" alt="Grand Ballroom">
+                        <div class="space-capacity">
+                            <i class="fas fa-users"></i>
+                            <span>Up to 500 guests</span>
+                        </div>
+                    </div>
+                    <div class="space-info">
+                        <span class="space-badge">Ballroom</span>
+                        <h3>Grand Ballroom</h3>
+                        <p>Our flagship venue featuring crystal chandeliers, marble floors, and panoramic city views.</p>
+                        <div class="space-features">
+                            <span><i class="fas fa-ruler-combined"></i> 500 m²</span>
+                            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+                            <span><i class="fas fa-microphone"></i> AV Equipment</span>
+                        </div>
+                        <button class="space-btn">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="space-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=600&h=400&fit=crop" alt="Conference Room">
+                        <div class="space-capacity">
+                            <i class="fas fa-users"></i>
+                            <span>Up to 50 guests</span>
+                        </div>
+                    </div>
+                    <div class="space-info">
+                        <span class="space-badge">Meeting Room</span>
+                        <h3>Executive Boardroom</h3>
+                        <p>Intimate setting for high-level meetings with state-of-the-art technology.</p>
+                        <div class="space-features">
+                            <span><i class="fas fa-ruler-combined"></i> 75 m²</span>
+                            <span><i class="fas fa-video"></i> Video Conferencing</span>
+                            <span><i class="fas fa-display"></i> Multiple Screens</span>
+                        </div>
+                        <button class="space-btn">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="space-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&h=400&fit=crop" alt="Wedding Venue">
+                        <div class="space-capacity">
+                            <i class="fas fa-users"></i>
+                            <span>Up to 300 guests</span>
+                        </div>
+                    </div>
+                    <div class="space-info">
+                        <span class="space-badge wedding">Wedding</span>
+                        <h3>Garden Pavilion</h3>
+                        <p>Beautiful outdoor venue with stunning garden views, perfect for romantic weddings.</p>
+                        <div class="space-features">
+                            <span><i class="fas fa-tree"></i> Garden View</span>
+                            <span><i class="fas fa-music"></i> Live Music</span>
+                            <span><i class="fas fa-utensils"></i> Catering Kitchen</span>
+                        </div>
+                        <button class="space-btn">Request Quote</button>
+                    </div>
+                </div>
+
+                <div class="space-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="space-image">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" alt="Rooftop Terrace">
+                        <div class="space-capacity">
+                            <i class="fas fa-users"></i>
+                            <span>Up to 100 guests</span>
+                        </div>
+                    </div>
+                    <div class="space-info">
+                        <span class="space-badge">Social</span>
+                        <h3>Rooftop Terrace</h3>
+                        <p>Stunning rooftop venue with breathtaking city skyline views for cocktail parties.</p>
+                        <div class="space-features">
+                            <span><i class="fas fa-city"></i> City Views</span>
+                            <span><i class="fas fa-glass-cheers"></i> Bar Area</span>
+                            <span><i class="fas fa-temperature-high"></i> Climate Control</span>
+                        </div>
+                        <button class="space-btn">Request Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Calendar Section -->
+    <section class="event-calendar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Plan Ahead</span>
+                <h2>Event Calendar</h2>
+                <p>Check availability and book your preferred date</p>
+            </div>
+            
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button class="calendar-nav prev" id="calendarPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h3 id="calendarTitle">March 2024</h3>
+                    <button class="calendar-nav next" id="calendarNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="calendar-weekdays">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+                
+                <div class="calendar-days" id="calendarDays">
+                    <!-- Calendar days will be generated by JavaScript -->
+                </div>
+                
+                <div class="calendar-legend">
+                    <div class="legend-item">
+                        <span class="legend-dot available"></span>
+                        <span>Available</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot limited"></span>
+                        <span>Limited</span>
+                    </div>
+                    <div class="legend-item">
+                        <span class="legend-dot booked"></span>
+                        <span>Fully Booked</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Booking Form -->
+    <section class="event-booking-section">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-form-container" data-aos="fade-right">
+                    <h2>Plan Your Event</h2>
+                    <p>Tell us about your event and we'll create a customized proposal</p>
+                    
+                    <form class="event-form" id="eventForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Your Name</label>
+                                <input type="text" placeholder="Full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-building"></i> Company Name</label>
+                                <input type="text" placeholder="Company (optional)">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-calendar"></i> Event Date</label>
+                                <input type="date" id="eventDate" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-clock"></i> Preferred Time</label>
+                                <select required>
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning (8AM - 12PM)</option>
+                                    <option value="afternoon">Afternoon (12PM - 5PM)</option>
+                                    <option value="evening">Evening (5PM - 10PM)</option>
+                                    <option value="full-day">Full Day</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-users"></i> Number of Guests</label>
+                                <select required>
+                                    <option value="">Select guests</option>
+                                    <option value="10-30">10-30 guests</option>
+                                    <option value="30-50">30-50 guests</option>
+                                    <option value="50-100">50-100 guests</option>
+                                    <option value="100-200">100-200 guests</option>
+                                    <option value="200+">200+ guests</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-tag"></i> Event Type</label>
+                                <select required>
+                                    <option value="">Select type</option>
+                                    <option value="conference">Conference</option>
+                                    <option value="meeting">Business Meeting</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="social">Social Event</option>
+                                    <option value="product-launch">Product Launch</option>
+                                    <option value="dinner">Gala Dinner</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-map-marker"></i> Preferred Venue</label>
+                            <select required>
+                                <option value="">Select venue</option>
+                                <option value="ballroom">Grand Ballroom</option>
+                                <option value="boardroom">Executive Boardroom</option>
+                                <option value="garden">Garden Pavilion</option>
+                                <option value="rooftop">Rooftop Terrace</option>
+                                <option value="not-sure">Not Sure - Need Recommendation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Special Requirements</label>
+                            <textarea placeholder="Tell us about your event needs, dietary requirements, setup preferences, etc." rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Submit Inquiry</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="booking-info" data-aos="fade-left">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Why Choose LuxeStay?</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Dedicated event coordinator</li>
+                            <li><i class="fas fa-check"></i> Customizable event packages</li>
+                            <li><i class="fas fa-check"></i> State-of-the-art technology</li>
+                            <li><i class="fas fa-check"></i> Gourmet catering options</li>
+                            <li><i class="fas fa-check"></i> Valet parking included</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card contact">
+                        <h3>Event Team</h3>
+                        <p>Our experienced event team is ready to help</p>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>events@luxestay.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card packages">
+                        <h3>Popular Packages</h3>
+                        <div class="package-item">
+                            <h4>Corporate Day</h4>
+                            <p>Meeting room + Lunch + Coffee breaks</p>
+                            <span class="package-price">$75/person</span>
+                        </div>
+                        <div class="package-item">
+                            <h4>Wedding Reception</h4>
+                            <p>Full venue + Catering + Bar service</p>
+                            <span class="package-price">From $8,500</span>
+                        </div>
+                        <div class="package-item">
+                            <h4>Gala Dinner</h4>
+                            <p>Premium venue + 5-course meal</p>
+                            <span class="package-price">$150/person</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="event-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Our annual conference was a huge success thanks to the LuxeStay team. The facilities were impeccable and the service was outstanding."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=60&h=60&fit=crop" alt="James Wilson">
+                        <div>
+                            <h4>James Wilson</h4>
+                            <p>CEO, TechCorp Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Our wedding day was absolutely perfect. The team went above and beyond to make our special day truly memorable. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=60&h=60&fit=crop" alt="Emily & Michael">
+                        <div>
+                            <h4>Emily & Michael</h4>
+                            <p>Wedding Clients</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"We've hosted multiple product launches at LuxeStay and every event has been exceptional. The attention to detail is remarkable."</p>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=60&h=60&fit=crop" alt="Sarah Chen">
+                        <div>
+                            <h4>Sarah Chen</h4>
+                            <p>Marketing Director, Luxe Brands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner events-cta">
+        <div class="banner-content">
+            <div class="banner-bg">
+                <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1920&h=600&fit=crop" alt="Events">
+            </div>
+            <div class="banner-overlay"></div>
+            <div class="container">
+                <div class="banner-text" data-aos="zoom-in">
+                    <h2>Ready to Plan Your Event?</h2>
+                    <p>Contact our events team today for a personalized quote</p>
+                    <div class="banner-buttons">
+                        <button class="cta-btn primary" onclick="document.getElementById('eventForm').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                        <button class="cta-btn secondary" onclick="window.location.href='contact.html'">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <span class="brand-icon">✦</span>
+                        <h1>LuxeStay</h1>
+                    </div>
+                    <p>Experience luxury and elegance at LuxeStay Hotel. Your home away from home in the heart of the city.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/LuxeHotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="loyalty.html">Rewards Program</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> reservations@luxestay.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Guest Services</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxeStay Hotel. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="events.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LuxeStay Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">✦</span>
+                    <h1>LuxeStay</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="rooms.html" class="nav-link">Rooms & Suites</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="loyalty.html" class="nav-link">Rewards</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="index.html#booking" class="nav-link btn-book">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-bg">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=600&fit=crop" alt="Contact Us">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <span class="page-subtitle">Get In Touch</span>
+                <h1>Contact Us</h1>
+                <p>We'd love to hear from you</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Contact</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards">
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Visit Us</h3>
+                    <p>123 Luxury Avenue<br>New York, NY 10001<br>United States</p>
+                    <a href="#" class="contact-link">Get Directions <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>Reservations<br><strong>+1 (555) 123-4567</strong></p>
+                    <p>General Inquiries<br><strong>+1 (555) 987-6543</strong></p>
+                </div>
+                
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>reservations@luxestay.com</p>
+                    <p>events@luxestay.com</p>
+                    <p>feedback@luxestay.com</p>
+                </div>
+                
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Hours</h3>
+                    <p>Front Desk: <strong>24/7</strong></p>
+                    <p>Reservations: <strong>24/7</strong></p>
+                    <p>Concierge: <strong>24/7</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-form-container" data-aos="fade-right">
+                    <h2>Send Us a Message</h2>
+                    <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> First Name</label>
+                                <input type="text" placeholder="John" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-user"></i> Last Name</label>
+                                <input type="text" placeholder="Doe" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" placeholder="+1 (555) 000-0000">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Subject</label>
+                            <select required>
+                                <option value="">Select a topic</option>
+                                <option value="reservation">Reservation Inquiry</option>
+                                <option value="general">General Question</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="careers">Careers</option>
+                                <option value="press">Press & Media</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Message</label>
+                            <textarea placeholder="How can we help you?" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for exclusive offers and updates</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-map-container" data-aos="fade-left">
+                    <div class="map-wrapper">
+                        <!-- Embedded Map Placeholder -->
+                        <div class="map-placeholder">
+                            <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=600&h=500&fit=crop" alt="Hotel Location">
+                            <div class="map-overlay">
+                                <div class="map-pin">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="map-label">
+                                    <h4>LuxeStay Hotel</h4>
+                                    <p>123 Luxury Avenue, NY</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nearby-attractions">
+                        <h3>Nearby Attractions</h3>
+                        <div class="attraction-list">
+                            <div class="attraction-item">
+                                <i class="fas fa-landmark"></i>
+                                <div>
+                                    <h4>Central Park</h4>
+                                    <p>0.5 miles away</p>
+                                </div>
+                            </div>
+                            <div class="attraction-item">
+                                <i class="fas fa-shopping-bag"></i>
+                                <div>
+                                    <h4>Times Square</h4>
+                                    <p>1.2 miles away</p>
+                                </div>
+                            </div>
+                            <div class="attraction-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Museum of Modern Art</h4>
+                                    <p>0.8 miles away</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Contact Options -->
+    <section class="direct-contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Quick Connect</span>
+                <h2>Other Ways to Reach Us</h2>
+            </div>
+            
+            <div class="direct-contact-grid">
+                <div class="direct-contact-card" data-aos="fade-up">
+                    <div class="direct-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Make a Reservation</h3>
+                    <p>Book your stay directly through our website for the best rates</p>
+                    <a href="index.html#booking" class="direct-btn">Book Now</a>
+                </div>
+                
+                <div class="direct-contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="direct-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Event Inquiries</h3>
+                    <p>Planning a corporate event or celebration? Our team is ready to help</p>
+                    <a href="events.html" class="direct-btn">Plan Event</a>
+                </div>
+                
+                <div class="direct-contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="direct-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Careers</h3>
+                    <p>Join our team and build your career in hospitality</p>
+                    <a href="#" class="direct-btn">View Jobs</a>
+                </div>
+                
+                <div class="direct-contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="direct-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3>Press & Media</h3>
+                    <p>For media inquiries and press information</p>
+                    <a href="#" class="direct-btn">Press Room</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-content" data-aos="fade-up">
+                <span class="section-subtitle">Stay Connected</span>
+                <h2>Follow Us on Social Media</h2>
+                <p>Tag us in your photos @LuxestayHotel for a chance to be featured</p>
+                
+                <div class="social-grid">
+                    <a href="https://www.instagram.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-card instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>@luxestayhotel</span>
+                        <div class="social-posts">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=150&h=150&fit=crop" alt="">
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.facebook.com/LuxeHotels" target="_blank" rel="noopener noreferrer" class="social-card facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>LuxeStay Hotel</span>
+                        <div class="social-posts">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=150&h=150&fit=crop" alt="">
+                        </div>
+                    </a>
+                    
+                    <a href="https://twitter.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-card twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span>@luxestay</span>
+                        <div class="social-posts">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=150&h=150&fit=crop" alt="">
+                        </div>
+                    </a>
+                    
+                    <a href="https://www.linkedin.com/company/luxehotels" target="_blank" rel="noopener noreferrer" class="social-card linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span>LuxeStay Hotels</span>
+                        <div class="social-posts">
+                            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=150&h=150&fit=crop" alt="">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=150&h=150&fit=crop" alt="">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Need Help?</span>
+                <h2>Common Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>What are the check-in and check-out times?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Check-in is at 3:00 PM and check-out is at 11:00 AM. Early check-in and late check-out can be requested based on availability.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>Is parking available at the hotel?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer complimentary valet parking for all hotel guests. Electric vehicle charging stations are also available.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>Do you offer airport transportation?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide airport shuttle service. Please contact our concierge at least 24 hours in advance to arrange transportation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span>Are pets allowed?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we welcome pets! A $50 non-refundable pet fee applies. Pet-friendly rooms are subject to availability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <span class="brand-icon">✦</span>
+                        <h1>LuxeStay</h1>
+                    </div>
+                    <p>Experience luxury and elegance at LuxeStay Hotel. Your home away from home in the heart of the city.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/LuxeHotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="loyalty.html">Rewards Program</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> reservations@luxestay.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Guest Services</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxeStay Hotel. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+</body>
+</html>

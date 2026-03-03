@@ -1,0 +1,783 @@
+/* ============================================
+   LOYALTY PAGE STYLES
+   ============================================ */
+
+/* Loyalty Header */
+.loyalty-header {
+    background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.steps-grid {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    padding: 40px 30px;
+    position: relative;
+}
+
+.step-connector {
+    display: flex;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding-top: 60px;
+}
+
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--light-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.step-card:hover .step-icon {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.step-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Membership Tiers */
+.membership-tiers {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.tier-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.tier-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.tier-card.premium-tier {
+    background: linear-gradient(135deg, #1a3a52 0%, #2c5282 100%);
+    color: var(--white);
+}
+
+.tier-badge {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 8px 40px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+}
+
+.tier-badge.premium {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: var(--white);
+}
+
+.tier-header {
+    margin-bottom: 30px;
+}
+
+.tier-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2rem;
+}
+
+.tier-icon.member {
+    background: rgba(113, 128, 150, 0.2);
+    color: #718096;
+}
+
+.tier-icon.silver {
+    background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+    color: var(--white);
+}
+
+.tier-icon.gold {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: var(--white);
+}
+
+.tier-icon.platinum {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: var(--white);
+}
+
+.tier-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.tier-requirement {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.premium-tier .tier-requirement {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tier-body {
+    margin-bottom: 30px;
+}
+
+.tier-benefits {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.tier-benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+.premium-tier .tier-benefits li {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.tier-benefits li i {
+    color: #48bb78;
+    width: 20px;
+}
+
+.premium-tier .tier-benefits li i {
+    color: var(--secondary-color);
+}
+
+.tier-earning {
+    padding: 15px;
+    background: var(--light-bg);
+    border-radius: 10px;
+}
+
+.premium-tier .tier-earning {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.earning-rate {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.premium-tier .earning-rate {
+    color: var(--secondary-color);
+}
+
+.tier-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tier-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.tier-btn.silver {
+    background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
+}
+
+.tier-btn.gold {
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: var(--primary-color);
+}
+
+.tier-btn.platinum {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: var(--white);
+}
+
+/* Points Redemption */
+.points-redemption {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.redemption-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.redemption-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.redemption-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.redemption-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.redemption-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.redemption-card:hover .redemption-image img {
+    transform: scale(1.1);
+}
+
+.redemption-content {
+    padding: 25px;
+}
+
+.redemption-category {
+    display: inline-block;
+    background: var(--light-bg);
+    color: var(--primary-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.redemption-content h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.redemption-content p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.redemption-cost {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.redemption-cost .points {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.redemption-cost .points-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+/* Member Dashboard */
+.member-dashboard {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.dashboard-card {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-card h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.current-tier {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tier-badge-display {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #d4af37, #f4d03f);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.points-display {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.points-circle {
+    position: relative;
+    width: 180px;
+    height: 180px;
+}
+
+.points-circle svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.points-circle .circle-bg {
+    fill: none;
+    stroke: var(--light-bg);
+    stroke-width: 8;
+}
+
+.points-circle .circle-progress {
+    fill: none;
+    stroke: var(--secondary-color);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.points-value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.points-value .number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.points-value .label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.progress-info {
+    margin-bottom: 30px;
+}
+
+.progress-item {
+    margin-bottom: 20px;
+}
+
+.progress-item .label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 8px;
+}
+
+.progress-item .value {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.progress-item .progress-bar {
+    height: 8px;
+    background: var(--light-bg);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-item .progress-fill {
+    height: 100%;
+    background: var(--secondary-color);
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.quick-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.action-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px;
+    background: var(--light-bg);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--primary-color);
+}
+
+.action-btn:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.action-btn i {
+    font-size: 1.5rem;
+}
+
+.action-btn span {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.dashboard-benefits {
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.dashboard-benefits h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.benefit-item:last-of-type {
+    border-bottom: none;
+}
+
+.benefit-item i {
+    width: 40px;
+    height: 40px;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.benefit-item h4 {
+    color: var(--primary-color);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.join-cta {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.join-cta p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.join-cta .cta-btn {
+    width: 100%;
+}
+
+/* Points Calculator */
+.points-calculator {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.calculator-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--white);
+    border-radius: var(--border-radius-lg);
+    padding: 50px;
+    box-shadow: var(--shadow);
+}
+
+.calculator-content h2 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.calculator-content > p {
+    color: var(--text-light);
+    margin-bottom: 35px;
+}
+
+.calculator-form .form-group {
+    margin-bottom: 25px;
+}
+
+.calculator-form label {
+    display: block;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}
+
+.calculator-form select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--white);
+}
+
+.calculate-result {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.result-value {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.result-points {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.calculator-visual img {
+    width: 100%;
+    border-radius: var(--border-radius-lg);
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.faq-grid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--light-bg);
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 25px 30px;
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    color: var(--secondary-color);
+}
+
+.faq-question i {
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+}
+
+.faq-answer p {
+    padding: 0 30px 25px;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-visual {
+        order: -1;
+    }
+    
+    .steps-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step-connector {
+        transform: rotate(90deg);
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .tiers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .calculator-wrapper {
+        padding: 30px;
+    }
+}

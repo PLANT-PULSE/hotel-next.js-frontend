@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeStay Rewards - Loyalty Program</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="loyalty.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">✦</span>
+                    <h1>LuxeStay</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="rooms.html" class="nav-link">Rooms & Suites</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="loyalty.html" class="nav-link active">Rewards</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html#booking" class="nav-link btn-book">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header loyalty-header">
+        <div class="header-bg">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&h=600&fit=crop" alt="LuxeStay Rewards">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <span class="page-subtitle">Exclusive Benefits</span>
+                <h1>LuxeStay Rewards</h1>
+                <p>Earn points, unlock exclusive benefits, and enjoy unparalleled luxury</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Rewards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Program Overview</span>
+                <h2>How It Works</h2>
+                <p>Join our loyalty program and start earning rewards today</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Join Free</h3>
+                    <p>Sign up for LuxeStay Rewards membership at no cost</p>
+                </div>
+                
+                <div class="step-connector" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <h3>Stay & Earn</h3>
+                    <p>Earn 10 points for every $1 spent on room bookings</p>
+                </div>
+                
+                <div class="step-connector" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                
+                <div class="step-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Unlock Rewards</h3>
+                    <p>Redeem points for free nights, upgrades, and exclusive perks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Tiers -->
+    <section class="membership-tiers">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Membership Levels</span>
+                <h2>Choose Your Tier</h2>
+                <p>Unlock more benefits as you climb the membership ladder</p>
+            </div>
+            
+            <div class="tiers-grid">
+                <!-- Member Tier -->
+                <div class="tier-card" data-aos="fade-up">
+                    <div class="tier-header">
+                        <div class="tier-icon member">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Member</h3>
+                        <p class="tier-requirement">Starting Tier</p>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-benefits">
+                            <li><i class="fas fa-check"></i> Earn 10 points/$1</li>
+                            <li><i class="fas fa-check"></i> Member-only rates</li>
+                            <li><i class="fas fa-check"></i> Free WiFi</li>
+                            <li><i class="fas fa-check"></i> Late checkout (upon availability)</li>
+                            <li><i class="fas fa-check"></i> Birthday reward</li>
+                        </ul>
+                        <div class="tier-earning">
+                            <span class="earning-rate">10 pts/$1</span>
+                        </div>
+                    </div>
+                    <button class="tier-btn">Join Now</button>
+                </div>
+
+                <!-- Silver Tier -->
+                <div class="tier-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tier-badge">Popular</div>
+                    <div class="tier-header">
+                        <div class="tier-icon silver">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Silver</h3>
+                        <p class="tier-requirement">5,000 points or 10 nights/year</p>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-benefits">
+                            <li><i class="fas fa-check"></i> Earn 12 points/$1</li>
+                            <li><i class="fas fa-check"></i> All Member benefits</li>
+                            <li><i class="fas fa-check"></i> Room upgrades</li>
+                            <li><i class="fas fa-check"></i> Welcome amenity</li>
+                            <li><i class="fas fa-check"></i> Early check-in / Late checkout</li>
+                            <li><i class="fas fa-check"></i> Free breakfast for two</li>
+                        </ul>
+                        <div class="tier-earning">
+                            <span class="earning-rate">12 pts/$1</span>
+                        </div>
+                    </div>
+                    <button class="tier-btn silver">Upgrade to Silver</button>
+                </div>
+
+                <!-- Gold Tier -->
+                <div class="tier-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tier-header">
+                        <div class="tier-icon gold">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>Gold</h3>
+                        <p class="tier-requirement">15,000 points or 30 nights/year</p>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-benefits">
+                            <li><i class="fas fa-check"></i> Earn 15 points/$1</li>
+                            <li><i class="fas fa-check"></i> All Silver benefits</li>
+                            <li><i class="fas fa-check"></i> Suite upgrades</li>
+                            <li><i class="fas fa-check"></i> Club lounge access</li>
+                            <li><i class="fas fa-check"></i> Guaranteed late checkout</li>
+                            <li><i class="fas fa-check"></i> Annual gift</li>
+                            <li><i class="fas fa-check"></i> Dedicated concierge</li>
+                        </ul>
+                        <div class="tier-earning">
+                            <span class="earning-rate">15 pts/$1</span>
+                        </div>
+                    </div>
+                    <button class="tier-btn gold">Upgrade to Gold</button>
+                </div>
+
+                <!-- Platinum Tier -->
+                <div class="tier-card premium-tier" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tier-badge premium">Exclusive</div>
+                    <div class="tier-header">
+                        <div class="tier-icon platinum">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Platinum</h3>
+                        <p class="tier-requirement">40,000 points or 60 nights/year</p>
+                    </div>
+                    <div class="tier-body">
+                        <ul class="tier-benefits">
+                            <li><i class="fas fa-check"></i> Earn 20 points/$1</li>
+                            <li><i class="fas fa-check"></i> All Gold benefits</li>
+                            <li><i class="fas fa-check"></i> Penthouse upgrades</li>
+                            <li><i class="fas fa-check"></i> Butlers service</li>
+                            <li><i class="fas fa-check"></i> Free spa treatment</li>
+                            <li><i class="fas fa-check"></i> Airport transfers</li>
+                            <li><i class="fas fa-check"></i> Exclusive events access</li>
+                            <li><i class="fas fa-check"></i> Personal travel advisor</li>
+                        </ul>
+                        <div class="tier-earning">
+                            <span class="earning-rate">20 pts/$1</span>
+                        </div>
+                    </div>
+                    <button class="tier-btn platinum">Upgrade to Platinum</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points Redemption -->
+    <section class="points-redemption">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Redeem Points</span>
+                <h2>Ways to Redeem</h2>
+                <p>Use your hard-earned points for exclusive rewards</p>
+            </div>
+            
+            <div class="redemption-grid">
+                <div class="redemption-card" data-aos="fade-up">
+                    <div class="redemption-image">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&h=250&fit=crop" alt="Free Night">
+                    </div>
+                    <div class="redemption-content">
+                        <span class="redemption-category">Stay</span>
+                        <h3>Free Night</h3>
+                        <p>Redeem points for a free night at any of our properties</p>
+                        <div class="redemption-cost">
+                            <span class="points">20,000 - 50,000</span>
+                            <span class="points-label">points</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="redemption-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="redemption-image">
+                        <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=400&h=250&fit=crop" alt="Room Upgrade">
+                    </div>
+                    <div class="redemption-content">
+                        <span class="redemption-category">Upgrade</span>
+                        <h3>Room Upgrade</h3>
+                        <p>Upgrade your room to a higher category</p>
+                        <div class="redemption-cost">
+                            <span class="points">5,000 - 15,000</span>
+                            <span class="points-label">points</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="redemption-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="redemption-image">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=250&fit=crop" alt="Dining Credit">
+                    </div>
+                    <div class="redemption-content">
+                        <span class="redemption-category">Dining</span>
+                        <h3>Dining Credit</h3>
+                        <p>Enjoy credits at our award-winning restaurants</p>
+                        <div class="redemption-cost">
+                            <span class="points">2,500 - 10,000</span>
+                            <span class="points-label">points</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="redemption-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="redemption-image">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=250&fit=crop" alt="Spa Treatment">
+                    </div>
+                    <div class="redemption-content">
+                        <span class="redemption-category">Wellness</span>
+                        <h3>Spa Treatment</h3>
+                        <p>Relax with a rejuvenating spa experience</p>
+                        <div class="redemption-cost">
+                            <span class="points">8,000 - 20,000</span>
+                            <span class="points-label">points</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Member Dashboard Preview -->
+    <section class="member-dashboard">
+        <div class="container">
+            <div class="dashboard-content">
+                <div class="dashboard-card" data-aos="fade-right">
+                    <h3>Your Membership Status</h3>
+                    
+                    <div class="current-tier">
+                        <div class="tier-badge-display">
+                            <i class="fas fa-crown"></i>
+                            <span>Gold Member</span>
+                        </div>
+                    </div>
+                    
+                    <div class="points-display">
+                        <div class="points-circle">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                                <circle cx="50" cy="50" r="45" class="circle-progress" stroke-dasharray="283" stroke-dashoffset="70"/>
+                            </svg>
+                            <div class="points-value">
+                                <span class="number">12,500</span>
+                                <span class="label">Points</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="progress-info">
+                        <div class="progress-item">
+                            <span class="label">To Next Tier</span>
+                            <span class="value">2,500 pts</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 83%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-item">
+                            <span class="label">Nights This Year</span>
+                            <span class="value">12 nights</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-history"></i>
+                            <span>Points History</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-gift"></i>
+                            <span>Redeem Points</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="dashboard-benefits" data-aos="fade-left">
+                    <h3>Your Gold Benefits</h3>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-bed"></i>
+                        <div>
+                            <h4>Suite Upgrade</h4>
+                            <p>Upgrade to suite category based on availability</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-coffee"></i>
+                        <div>
+                            <h4>Free Breakfast</h4>
+                            <p>Complimentary breakfast for two guests</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Late Checkout</h4>
+                            <p>Guaranteed 4 PM late checkout</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-glass-cheers"></i>
+                        <div>
+                            <h4>Club Lounge</h4>
+                            <p>Access to exclusive club lounge</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <i class="fas fa-user-tie"></i>
+                        <div>
+                            <h4>Concierge</h4>
+                            <p>Dedicated concierge service</p>
+                        </div>
+                    </div>
+                    
+                    <div class="join-cta">
+                        <p>Not a member yet?</p>
+                        <button class="cta-btn primary">Join Free Today</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Points Calculator -->
+    <section class="points-calculator">
+        <div class="container">
+            <div class="calculator-wrapper">
+                <div class="calculator-content" data-aos="fade-right">
+                    <span class="section-subtitle">Calculate Earnings</span>
+                    <h2>See What You Could Earn</h2>
+                    <p>Use our calculator to see how many points you can earn</p>
+                    
+                    <div class="calculator-form">
+                        <div class="form-group">
+                            <label>Estimated Stay Cost</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                                <input type="number" id="stayCost" placeholder="500" min="0">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Current Tier</label>
+                            <select id="currentTier">
+                                <option value="10">Member (10 pts/$)</option>
+                                <option value="12" selected>Silver (12 pts/$)</option>
+                                <option value="15">Gold (15 pts/$)</option>
+                                <option value="20">Platinum (20 pts/$)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="calculate-result">
+                            <span class="result-label">You'll earn approximately:</span>
+                            <span class="result-value" id="pointsResult">6,000</span>
+                            <span class="result-points">points</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculator-visual" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&h=400&fit=crop" alt="Hotel">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Questions</span>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <button class="faq-question">
+                        <span>How do I join LuxeStay Rewards?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Joining is free! Simply create an account on our website or ask about membership at check-in. You'll immediately start earning points on every stay.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>How do I earn points?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Earn 10 points for every $1 spent on qualified room rates. Points are credited to your account within 48 hours of check-out.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>Do points expire?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Points are valid for 3 years from the date earned. As long as you stay at least once every 3 years, your points will remain active.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        <span>Can I transfer points to another member?</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can transfer points to another LuxeStay Rewards member. A small transfer fee may apply depending on the amount.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <span class="brand-icon">✦</span>
+                        <h1>LuxeStay</h1>
+                    </div>
+                    <p>Experience luxury and elegance at LuxeStay Hotel. Your home away from home in the heart of the city.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/LuxeHotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="loyalty.html">Rewards Program</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> reservations@luxestay.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Guest Services</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxeStay Hotel. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="loyalty.js"></script>
+</body>
+</html>

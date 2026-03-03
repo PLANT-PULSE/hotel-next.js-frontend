@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms & Suites - LuxeStay Hotel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="rooms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <span class="brand-icon">✦</span>
+                    <h1>LuxeStay</h1>
+                </a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="rooms.html" class="nav-link active">Rooms & Suites</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="loyalty.html" class="nav-link">Rewards</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="index.html#booking" class="nav-link btn-book">Book Now</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="header-bg">
+            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1920&h=600&fit=crop" alt="Luxury Rooms">
+            <div class="header-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="header-content" data-aos="fade-up">
+                <span class="page-subtitle">Accommodations</span>
+                <h1>Rooms & Suites</h1>
+                <p>Discover our collection of beautifully appointed rooms and suites</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Rooms & Suites</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="room-filters">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter-group">
+                    <label>Room Type</label>
+                    <select id="filterType">
+                        <option value="all">All Rooms</option>
+                        <option value="standard">Standard</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="suite">Suite</option>
+                        <option value="penthouse">Penthouse</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <select id="filterPrice">
+                        <option value="all">Any Price</option>
+                        <option value="0-200">Under $200</option>
+                        <option value="200-400">$200 - $400</option>
+                        <option value="400-700">$400 - $700</option>
+                        <option value="700+">$700+</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Guests</label>
+                    <select id="filterGuests">
+                        <option value="all">Any Guests</option>
+                        <option value="1">1 Guest</option>
+                        <option value="2">2 Guests</option>
+                        <option value="3">3+ Guests</option>
+                    </select>
+                </div>
+                <button class="filter-btn" id="applyFilters">
+                    <i class="fas fa-filter"></i> Apply Filters
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Grid -->
+    <section class="rooms-listing">
+        <div class="container">
+            <div class="rooms-grid" id="roomsGrid">
+                <!-- Standard Room -->
+                <div class="room-card featured" data-type="standard" data-price="150" data-guests="2" data-aos="fade-up">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop" alt="Standard Room">
+                            <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=400&fit=crop" alt="Standard Room">
+                            <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=600&h=400&fit=crop" alt="Standard Room">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&h=400&fit=crop" alt="Standard Room">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <span class="room-badge">Best Value</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Standard Room</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Comfortable and modern room with all essential amenities and beautiful city views.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 32 m²</span>
+                            <span><i class="fas fa-bed"></i> Queen Bed</span>
+                            <span><i class="fas fa-tv"></i> Smart TV</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-shower"></i> Rain Shower</span>
+                            <span><i class="fas fa-coffee-maker"></i> Coffee Maker</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$150</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="standard">Book Now</button>
+                        <button class="room-btn details-btn" data-room="standard">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Deluxe Room -->
+                <div class="room-card featured" data-type="deluxe" data-price="250" data-guests="2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=400&fit=crop" alt="Deluxe Room">
+                            <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=600&h=400&fit=crop" alt="Deluxe Room">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop" alt="Deluxe Room">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&h=400&fit=crop" alt="Deluxe Room">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <div class="video-tour-overlay">
+                            <button class="video-tour-btn">
+                                <i class="fas fa-play"></i>
+                                <span>Virtual Tour</span>
+                            </button>
+                        </div>
+                        <span class="room-badge popular">Most Popular</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Deluxe Room</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Spacious room with premium bedding, mini bar, and stunning views of the city skyline.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 45 m²</span>
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-tv"></i> Smart TV</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-wine-glass"></i> Mini Bar</span>
+                            <span><i class="fas fa-bath"></i> Bathtub</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$250</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="deluxe">Book Now</button>
+                        <button class="room-btn details-btn" data-room="deluxe">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Executive Suite -->
+                <div class="room-card featured" data-type="suite" data-price="450" data-guests="4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=600&h=400&fit=crop" alt="Executive Suite">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop" alt="Executive Suite">
+                            <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=600&h=400&fit=crop" alt="Executive Suite">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&h=400&fit=crop" alt="Executive Suite">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <span class="room-badge">Suite</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Executive Suite</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Luxurious suite with separate living area, premium amenities, and exclusive lounge access.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 75 m²</span>
+                            <span><i class="fas fa-bed"></i> 2 King Beds</span>
+                            <span><i class="fas fa-couch"></i> Living Area</span>
+                            <span><i class="fas fa-wine-glass"></i> Mini Bar</span>
+                            <span><i class="fas fa-bath"></i> Spa Bath</span>
+                            <span><i class="fas fa-concierge-bell"></i> Butlers Service</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$450</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="suite">Book Now</button>
+                        <button class="room-btn details-btn" data-room="suite">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Presidential Penthouse -->
+                <div class="room-card featured" data-type="penthouse" data-price="1000" data-guests="6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop" alt="Penthouse">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop" alt="Penthouse">
+                            <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=600&h=400&fit=crop" alt="Penthouse">
+                            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=600&h=400&fit=crop" alt="Penthouse">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <span class="room-badge premium">Premium</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Presidential Penthouse</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">The ultimate in luxury living with private pool, panoramic views, and dedicated butler service.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 150 m²</span>
+                            <span><i class="fas fa-bed"></i> 3 King Beds</span>
+                            <span><i class="fas fa-swimming-pool"></i> Private Pool</span>
+                            <span><i class="fas fa-hot-tub"></i> Private Jacuzzi</span>
+                            <span><i class="fas fa-chef"></i> Private Chef</span>
+                            <span><i class="fas fa-car"></i> Private Garage</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$1,000</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="penthouse">Book Now</button>
+                        <button class="room-btn details-btn" data-room="penthouse">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Family Room -->
+                <div class="room-card" data-type="suite" data-price="350" data-guests="4" data-aos="fade-up">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&h=400&fit=crop" alt="Family Room">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop" alt="Family Room">
+                            <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=600&h=400&fit=crop" alt="Family Room">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <span class="room-badge">Family</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Family Room</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Spacious room perfect for families with connecting rooms and child-friendly amenities.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 55 m²</span>
+                            <span><i class="fas fa-bed"></i> 2 Queen Beds</span>
+                            <span><i class="fas fa-tv"></i> Smart TV</span>
+                            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+                            <span><i class="fas fa-child"></i> Kids Area</span>
+                            <span><i class="fas fa-utensils"></i> Kitchenette</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$350</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="family">Book Now</button>
+                        <button class="room-btn details-btn" data-room="family">View Details</button>
+                    </div>
+                </div>
+
+                <!-- Business Room -->
+                <div class="room-card" data-type="deluxe" data-price="280" data-guests="2" data-aos="fade-up">
+                    <div class="room-carousel">
+                        <div class="room-carousel-track">
+                            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&h=400&fit=crop" alt="Business Room">
+                            <img src="https://images.unsplash.com/photo-1584132915807-fd1f5fbc078f?w=600&h=400&fit=crop" alt="Business Room">
+                            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=600&h=400&fit=crop" alt="Business Room">
+                        </div>
+                        <button class="room-carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="room-carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                        <span class="room-badge">Business</span>
+                    </div>
+                    <div class="room-info">
+                        <div class="room-header">
+                            <h3>Business Room</h3>
+                            <div class="room-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <p class="room-desc">Designed for business travelers with dedicated workspace and high-speed internet.</p>
+                        
+                        <div class="room-amenities">
+                            <span><i class="fas fa-ruler-combined"></i> 40 m²</span>
+                            <span><i class="fas fa-bed"></i> King Bed</span>
+                            <span><i class="fas fa-laptop"></i> Work Desk</span>
+                            <span><i class="fas fa-wifi"></i> High-Speed WiFi</span>
+                            <span><i class="fas fa-print"></i> Printer Access</span>
+                            <span><i class="fas fa-phone"></i> Business Center</span>
+                        </div>
+                        
+                        <div class="room-pricing">
+                            <div class="price-info">
+                                <span class="price">$280</span>
+                                <span class="per-night">/night</span>
+                            </div>
+                            <span class="taxes">Excludes taxes & fees</span>
+                        </div>
+                        
+                        <button class="room-btn book-now" data-room="business">Book Now</button>
+                        <button class="room-btn details-btn" data-room="business">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Room Comparison -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Compare Rooms</span>
+                <h2>Find Your Perfect Room</h2>
+                <p>Use our comparison tool to find the best room for your needs</p>
+            </div>
+            
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th>
+                                <div class="room-type-header">
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=100&h=80&fit=crop" alt="Standard">
+                                    <span>Standard</span>
+                                    <span class="price">From $150</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="room-type-header popular">
+                                    <span class="popular-badge">Popular</span>
+                                    <img src="https://images.unsplash.com/photo-1540932239986-310128078ceb?w=100&h=80&fit=crop" alt="Deluxe">
+                                    <span>Deluxe</span>
+                                    <span class="price">From $250</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="room-type-header">
+                                    <img src="https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=100&h=80&fit=crop" alt="Suite">
+                                    <span>Suite</span>
+                                    <span class="price">From $450</span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="room-type-header premium">
+                                    <span class="premium-badge">Premium</span>
+                                    <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=100&h=80&fit=crop" alt="Penthouse">
+                                    <span>Penthouse</span>
+                                    <span class="price">From $1,000</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Room Size</td>
+                            <td>32 m²</td>
+                            <td>45 m²</td>
+                            <td>75 m²</td>
+                            <td>150 m²</td>
+                        </tr>
+                        <tr>
+                            <td>Bed Configuration</td>
+                            <td>1 Queen</td>
+                            <td>1 King</td>
+                            <td>2 King</td>
+                            <td>3 King</td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Guests</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <td>Bathrooms</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>City View</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Smart TV</td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mini Bar</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Living Area</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Bathtub</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Spa Bath</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Private Pool</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Butler Service</td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-times"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                            <td><i class="fas fa-check"></i></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><button class="select-btn" data-room="standard">Select</button></td>
+                            <td><button class="select-btn popular" data-room="deluxe">Select</button></td>
+                            <td><button class="select-btn" data-room="suite">Select</button></td>
+                            <td><button class="select-btn premium" data-room="penthouse">Select</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="virtual-tour-section">
+        <div class="container">
+            <div class="tour-content">
+                <div class="tour-text" data-aos="fade-right">
+                    <span class="section-subtitle">Experience</span>
+                    <h2>Virtual Room Tours</h2>
+                    <p>Explore our rooms from the comfort of your home with our immersive 360° virtual tours</p>
+                    
+                    <div class="tour-features">
+                        <div class="tour-feature">
+                            <i class="fas fa-vr-cardboard"></i>
+                            <div>
+                                <h4>360° Views</h4>
+                                <p>Look around each room in full detail</p>
+                            </div>
+                        </div>
+                        <div class="tour-feature">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <h4>Any Device</h4>
+                                <p>View on desktop, tablet, or mobile</p>
+                            </div>
+                        </div>
+                        <div class="tour-feature">
+                            <i class="fas fa-play-circle"></i>
+                            <div>
+                                <h4>Video Walkthroughs</h4>
+                                <p>Professional video tours available</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-btn primary">
+                        <i class="fas fa-play"></i>
+                        <span>Start Virtual Tour</span>
+                    </button>
+                </div>
+                
+                <div class="tour-video" data-aos="fade-left">
+                    <div class="video-container">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop" alt="Virtual Tour Preview">
+                        <div class="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <span class="brand-icon">✦</span>
+                        <h1>LuxeStay</h1>
+                    </div>
+                    <p>Experience luxury and elegance at LuxeStay Hotel. Your home away from home in the heart of the city.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/LuxeHotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@luxehotels" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="rooms.html">Rooms & Suites</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="loyalty.html">Rewards Program</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Luxury Avenue, New York, NY 10001</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> reservations@luxestay.com</li>
+                        <li><i class="fas fa-clock"></i> 24/7 Guest Services</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers and updates</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 LuxeStay Hotel. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+    <script src="rooms.js"></script>
+</body>
+</html>
