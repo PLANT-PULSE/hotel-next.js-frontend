@@ -115,22 +115,24 @@ export default function Navigation() {
 
         {/* Book Now Button */}
         <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-          <Button
-            style={{
-              background: "#d4af37",
-              color: "#1a3a52",
-              padding: "0.6rem 1.5rem",
-              fontSize: "0.9rem",
-              fontWeight: "bold",
-              border: "none",
-              cursor: "pointer",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              transition: "all 0.3s ease",
-            }}
-          >
-            Book Now
-          </Button>
+          <Link href="/rooms">
+            <Button
+              style={{
+                background: "#d4af37",
+                color: "#1a3a52",
+                padding: "0.6rem 1.5rem",
+                fontSize: "0.9rem",
+                fontWeight: "bold",
+                border: "none",
+                cursor: "pointer",
+                textTransform: "uppercase",
+                letterSpacing: "1px",
+                transition: "all 0.3s ease",
+              }}
+            >
+              Book Now
+            </Button>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
