@@ -13,7 +13,202 @@ document.addEventListener('DOMContentLoaded', function() {
     initBackToTop();
     initFAQ();
     initMobileNavigation();
+    
+    // Initialize Service Worker and Network Status
+    initServiceWorker();
+    initNetworkStatus();
 });
+
+/* ============================================
+   SERVICE WORKER REGISTRATION
+   ============================================ */
+
+function initServiceWorker() {
+    // Check if service workers are supported
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then((registration) => {
+                    console.log('Service Worker registered successfully:', registration.scope);
+                    
+                    // Check for updates
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // New version available
+                                showUpdateNotification();
+                            }
+                        });
+                    });
+                })
+                .catch((error) => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        });
+    }
+}
+
+/* ============================================
+   NETWORK STATUS (ONLINE/OFFLINE)
+   ============================================ */
+
+let offlineNotificationShown = false;
+
+function initNetworkStatus() {
+    // Check initial status
+    if (!navigator.onLine) {
+        showOfflineNotification();
+    }
+    
+    // Listen for online event
+    window.addEventListener('online', () => {
+        console.log('Connection restored - Online');
+        hideOfflineNotification();
+        showOnlineNotification();
+    });
+    
+    // Listen for offline event
+    window.addEventListener('offline', () => {
+        console.log('Connection lost - Offline');
+        showOfflineNotification();
+    });
+}
+
+function showOfflineNotification() {
+    // Remove existing notification if any
+    hideOfflineNotification();
+    
+    const notification = document.createElement('div');
+    notification.id = 'offline-notification';
+    notification.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #ff6600, #e55c00);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            z-index: 9999;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        ">
+            <i class="fas fa-wifi" style="font-size: 14px;"></i>
+            <span>You are currently offline. Some features may be limited, but the website is still available.</span>
+            <button onclick="this.parentElement.remove()" style="
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 5px 12px;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 12px;
+            ">✕</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    offlineNotificationShown = true;
+    
+    // Animate in
+    requestAnimationFrame(() => {
+        notification.style.transform = 'translateY(0)';
+    });
+}
+
+function hideOfflineNotification() {
+    const notification = document.getElementById('offline-notification');
+    if (notification) {
+        notification.style.transform = 'translateY(-100%)';
+        setTimeout(() => notification.remove(), 300);
+    }
+    offlineNotificationShown = false;
+}
+
+function showOnlineNotification() {
+    const notification = document.createElement('div');
+    notification.id = 'online-notification';
+    notification.innerHTML = `
+        <div style="
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            z-index: 9999;
+            font-weight: 500;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        ">
+            <i class="fas fa-check-circle" style="font-size: 14px;"></i>
+            <span>You're back online! All features are available.</span>
+            <button onclick="this.parentElement.remove()" style="
+                background: rgba(255,255,255,0.2);
+                border: none;
+                color: white;
+                padding: 5px 12px;
+                border-radius: 15px;
+                cursor: pointer;
+                font-size: 12px;
+            ">✕</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        if (notification.parentElement) {
+            notification.style.transform = 'translateY(-100%)';
+            setTimeout(() => notification.remove(), 300);
+        }
+    }, 3000);
+}
+
+function showUpdateNotification() {
+    const notification = document.createElement('div');
+    notification.innerHTML = `
+        <div style="
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #333;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        ">
+            <span>A new version is available.</span>
+            <button onclick="window.location.reload()" style="
+                background: #ff6600;
+                border: none;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: 600;
+            ">Update</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+}
 
 /* ============================================
    NAVBAR SCROLL EFFECT
