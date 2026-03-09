@@ -18,19 +18,19 @@ export default function Home() {
 
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&h=900&fit=crop",
+      image: "/images/download (1).jpeg",
       title: "Welcome to LuxeStay",
       subtitle: "Experience Luxury Like Never Before",
       cta: "Book Now",
     },
     {
-      image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1600&h=900&fit=crop",
+      image: "/images/download (2).jpeg",
       title: "World-Class Amenities",
       subtitle: "Discover Our Premium Facilities",
       cta: "Explore",
     },
     {
-      image: "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=1600&h=900&fit=crop",
+      image: "/images/download (3).jpeg",
       title: "Exceptional Dining",
       subtitle: "Award-Winning Restaurants & Bars",
       cta: "Reserve Table",
@@ -43,7 +43,7 @@ export default function Home() {
       description: "Comfortable room with modern amenities and city view",
       price: "$150",
       size: "32 m²",
-      image: "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&h=400&fit=crop",
+      image: "/images/download (4).jpeg",
       link: "/rooms",
     },
     {
@@ -51,7 +51,7 @@ export default function Home() {
       description: "Spacious room with premium amenities and panoramic views",
       price: "$250",
       size: "45 m²",
-      image: "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&h=400&fit=crop",
+      image: "/images/download (5).jpeg",
       link: "/rooms",
     },
     {
@@ -59,28 +59,28 @@ export default function Home() {
       description: "Luxurious suite with separate living area and butler service",
       price: "$450",
       size: "75 m²",
-      image: "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600&h=400&fit=crop",
+      image: "/images/download (6).jpeg",
       link: "/rooms",
     },
   ];
 
   const amenities = [
-    { name: "Infinity Pool", icon: "🏊", description: "Rooftop pool with stunning city views", image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&h=400&fit=crop" },
-    { name: "Spa & Wellness", icon: "💆", description: "Full-service spa with massages and treatments", image: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop" },
-    { name: "Fitness Center", icon: "🏋️", description: "State-of-the-art gym open 24/7", image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop" },
-    { name: "Fine Dining", icon: "🍽️", description: "3 award-winning restaurants", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" },
+    { name: "Infinity Pool", icon: "🏊", description: "Rooftop pool with stunning city views", image: "/images/download (7).jpeg" },
+    { name: "Spa & Wellness", icon: "💆", description: "Full-service spa with massages and treatments", image: "/images/download (8).jpeg" },
+    { name: "Fitness Center", icon: "🏋️", description: "State-of-the-art gym open 24/7", image: "/images/download (9).jpeg" },
+    { name: "Fine Dining", icon: "🍽️", description: "3 award-winning restaurants", image: "/images/download (10).jpeg" },
   ];
 
   const events = [
-    { title: "Corporate Retreats", description: "Fully equipped meeting rooms and event spaces", capacity: "Up to 500 guests", image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop" },
-    { title: "Wedding Packages", description: "Make your special day unforgettable", capacity: "Up to 300 guests", image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" },
-    { title: "Gala Dinners", description: "Elegant venues for special occasions", capacity: "Up to 400 guests", image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&h=400&fit=crop" },
+    { title: "Corporate Retreats", description: "Fully equipped meeting rooms and event spaces", capacity: "Up to 500 guests", image: "/images/download (11).jpeg" },
+    { title: "Wedding Packages", description: "Make your special day unforgettable", capacity: "Up to 300 guests", image: "/images/download (12).jpeg" },
+    { title: "Gala Dinners", description: "Elegant venues for special occasions", capacity: "Up to 400 guests", image: "/images/download (13).jpeg" },
   ];
 
   const loyaltyTiers = [
     { name: "Silver", benefits: ["5% discount", "Late checkout", "Welcome drink"], price: "Free", color: "#C0C0C0" },
-    { name: "Gold", benefits: ["10% discount", "Room upgrades", "Free breakfast", "Early check-in"], price: "$99/year", color: "#FFD700" },
-    { name: "Platinum", benefits: ["15% discount", "Suite upgrades", "All meals included", "Spa credits"], price: "$299/year", color: "#E5E4E2" },
+    { name: "Gold", benefits: ["10% discount", "Room upgrades", "Free breakfast", "Early check-in"], price: "$99/year", color: "#FF6600" },
+    { name: "Platinum", benefits: ["15% discount", "Suite upgrades", "All meals included", "Spa credits"], price: "#299/year", color: "#E5E4E2" },
   ];
 
   useEffect(() => {
@@ -171,7 +171,7 @@ export default function Home() {
               </p>
               <Button
                 style={{
-                  background: "#d4af37",
+                  background: "#ff6600",
                   color: "#1a3a52",
                   padding: "1rem 2.5rem",
                   fontSize: "1.1rem",
@@ -263,7 +263,7 @@ export default function Home() {
       {/* Booking Section */}
       <section style={{ padding: "80px 0", background: "#f5f5f5" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 20px" }}>
-          <h2 style={{ textAlign: "center", fontSize: "2.5rem", marginBottom: "50px", color: "#1a3a52" }}>
+          <h2 style={{ textAlign: "center", fontSize: "2.5rem", marginBottom: "50px", color: "#ff6600" }}>
             Find Your Perfect Stay
           </h2>
           <Card style={{ maxWidth: 900, margin: "0 auto", padding: "2rem", borderRadius: "16px" }}>
@@ -390,7 +390,7 @@ export default function Home() {
                       {room.price}<span style={{ fontSize: "0.9rem", color: "#666" }}>/night</span>
                     </span>
                     <Link href={room.link}>
-                      <Button variant="outline" style={{ borderColor: "#1a3a52", color: "#1a3a52" }}>
+                      <Button variant="outline" style={{ borderColor: "#ff6600", color: "#ff6600" }}>
                         View Details
                       </Button>
                     </Link>
@@ -524,7 +524,7 @@ export default function Home() {
       </section>
 
       {/* Loyalty Section */}
-      <section id="loyalty" style={{ padding: "100px 0", background: "linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%)", color: "#fff" }}>
+      <section id="loyalty" style={{ padding: "100px 0", background: "linear-gradient(135deg, #ff6600 0%, #cc5200 100%)", color: "#fff" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 20px" }}>
           <div style={{ textAlign: "center", marginBottom: "60px" }}>
             <h2 style={{ fontSize: "2.8rem", marginBottom: "1rem", color: "#d4af37" }}>
@@ -593,7 +593,7 @@ export default function Home() {
             ].map((item, index) => (
               <Card key={index} style={{ textAlign: "center", padding: "2rem", borderRadius: "16px" }}>
                 <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{item.icon}</div>
-                <h3 style={{ color: "#1a3a52", marginBottom: "0.5rem" }}>{item.title}</h3>
+                <h3 style={{ color: "#ff6600", marginBottom: "0.5rem" }}>{item.title}</h3>
                 <p style={{ color: "#666", margin: 0 }}>{item.content}</p>
               </Card>
             ))}

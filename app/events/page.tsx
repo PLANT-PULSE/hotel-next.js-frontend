@@ -13,7 +13,7 @@ const events = [
     title: "Corporate Retreats",
     subtitle: "Business Events & Conferences",
     description: "Host your next corporate event in our state-of-the-art conference facilities. From board meetings to large-scale conferences, we have the perfect space for your business needs.",
-    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop",
+    image: "/images/download (11).jpeg",
     capacity: "Up to 500 guests",
     duration: "Full day or half day",
     features: [
@@ -35,7 +35,7 @@ const events = [
     title: "Wedding Celebrations",
     subtitle: "Make Your Special Day Unforgettable",
     description: "Exchange vows in our elegant ballroom or outdoor garden. Our wedding specialists will ensure every detail is perfect for your celebration of love.",
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&h=500&fit=crop",
+    image: "/images/download (12).jpeg",
     capacity: "Up to 300 guests",
     duration: "Full day celebration",
     features: [
@@ -57,7 +57,7 @@ const events = [
     title: "Gala Dinners",
     subtitle: "Exclusive Evening Events",
     description: "Host an unforgettable gala dinner in our sophisticated venues. Perfect for charity events, award ceremonies, and milestone celebrations.",
-    image: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&h=500&fit=crop",
+    image: "/images/download (13).jpeg",
     capacity: "Up to 400 guests",
     duration: "Evening event",
     features: [
@@ -79,7 +79,7 @@ const events = [
     title: "Social Gatherings",
     subtitle: "Birthdays, Anniversaries & More",
     description: "Celebrate life's special moments with friends and family in our intimate event spaces. From birthday parties to anniversary dinners, we make it memorable.",
-    image: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&h=500&fit=crop",
+    image: "/images/download (14).jpeg",
     capacity: "Up to 100 guests",
     duration: "Flexible timing",
     features: [
@@ -115,7 +115,7 @@ export default function EventsPage() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1600&h=900&fit=crop"
+          src="/images/download (2).jpeg"
           alt="Events"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -158,10 +158,10 @@ export default function EventsPage() {
                   padding: "1rem 2rem",
                   fontSize: "1rem",
                   fontWeight: 600,
-                  background: selectedEvent.id === event.id ? "#1a3a52" : "#fff",
-                  border: "2px solid #1a3a52",
+                  background: selectedEvent.id === event.id ? "#ff6600" : "#fff",
+                  border: "2px solid #ff6600",
                   borderRadius: "8px",
-                  color: selectedEvent.id === event.id ? "#fff" : "#1a3a52",
+                  color: selectedEvent.id === event.id ? "#fff" : "#ff6600",
                   cursor: "pointer",
                   transition: "all 0.3s ease",
                   display: "flex",
@@ -205,7 +205,7 @@ export default function EventsPage() {
                   color: "#fff",
                 }}
               >
-                <Badge style={{ background: "#d4af37", color: "#1a3a52", fontWeight: "bold", marginBottom: "0.5rem" }}>
+                <Badge style={{ background: "#ff6600", color: "#fff", fontWeight: "bold", marginBottom: "0.5rem" }}>
                   {selectedEvent.capacity}
                 </Badge>
                 <p style={{ fontSize: "1rem", margin: 0 }}>📅 {selectedEvent.duration}</p>
@@ -214,7 +214,7 @@ export default function EventsPage() {
 
             {/* Event Info */}
             <div style={{ padding: "3rem" }}>
-              <h2 style={{ fontSize: "2.5rem", color: "#1a3a52", marginBottom: "0.5rem" }}>
+              <h2 style={{ fontSize: "2.5rem", color: "#ff6600", marginBottom: "0.5rem" }}>
                 {selectedEvent.title}
               </h2>
               <p style={{ fontSize: "1.2rem", color: "#d4af37", marginBottom: "1.5rem", fontWeight: 500 }}>
@@ -226,7 +226,7 @@ export default function EventsPage() {
 
               {/* Features */}
               <div style={{ marginBottom: "2rem" }}>
-                <h3 style={{ fontSize: "1.2rem", color: "#1a3a52", marginBottom: "1rem" }}>
+                <h3 style={{ fontSize: "1.2rem", color: "#ff6600", marginBottom: "1rem" }}>
                   Included Features
                 </h3>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
@@ -385,7 +385,7 @@ export default function EventsPage() {
           <div
             style={{
               marginTop: "80px",
-              background: "linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%)",
+              background: "linear-gradient(135deg, #ff6600 0%, #cc5200 100%)",
               padding: "60px",
               borderRadius: "20px",
               textAlign: "center",
@@ -399,8 +399,8 @@ export default function EventsPage() {
             <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
               <Button
                 style={{
-                  background: "#d4af37",
-                  color: "#1a3a52",
+                  background: "#ff6600",
+                  color: "#fff",
                   padding: "1rem 2.5rem",
                   fontSize: "1.1rem",
                   fontWeight: "bold",

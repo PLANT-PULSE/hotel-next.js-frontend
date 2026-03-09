@@ -104,7 +104,7 @@ export default function LoyaltyPage() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&h=900&fit=crop"
+          src="/images/download (4).jpeg"
           alt="Loyalty Program"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -153,8 +153,8 @@ export default function LoyaltyPage() {
                     width: "80px",
                     height: "80px",
                     borderRadius: "50%",
-                    background: "#1a3a52",
-                    color: "#d4af37",
+                    background: "#ff6600",
+                    color: "#fff",
                     fontSize: "2rem",
                     fontWeight: "bold",
                     display: "flex",
@@ -166,7 +166,7 @@ export default function LoyaltyPage() {
                 >
                   {item.step}
                 </div>
-                <h3 style={{ fontSize: "1.3rem", color: "#1a3a52", marginBottom: "0.75rem" }}>
+                <h3 style={{ fontSize: "1.3rem", color: "#ff6600", marginBottom: "0.75rem" }}>
                   {item.title}
                 </h3>
                 <p style={{ color: "#666", lineHeight: 1.6 }}>{item.description}</p>
@@ -239,8 +239,8 @@ export default function LoyaltyPage() {
                   >
                     {tier.id === "platinum" ? "👑" : tier.id === "gold" ? "🏆" : "⭐"}
                   </div>
-                  <CardTitle style={{ fontSize: "1.8rem", color: "#1a3a52" }}>{tier.name}</CardTitle>
-                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#d4af37" }}>
+                  <CardTitle style={{ fontSize: "1.8rem", color: "#ff6600" }}>{tier.name}</CardTitle>
+                  <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#ff6600" }}>
                     {tier.price}
                   </div>
                 </CardHeader>
@@ -265,8 +265,8 @@ export default function LoyaltyPage() {
                   <Button
                     onClick={() => setSelectedTier(tier)}
                     style={{
-                      background: selectedTier.id === tier.id ? "#d4af37" : "#1a3a52",
-                      color: selectedTier.id === tier.id ? "#1a3a52" : "#fff",
+                      background: selectedTier.id === tier.id ? "#ff6600" : "#ff6600",
+                      color: selectedTier.id === tier.id ? "#fff" : "#fff",
                       padding: "0.75rem 1.5rem",
                       fontWeight: "bold",
                       border: "none",
@@ -295,7 +295,7 @@ export default function LoyaltyPage() {
             {memberBenefits.map((benefit, idx) => (
               <Card key={idx} style={{ textAlign: "center", padding: "2rem" }}>
                 <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>{benefit.icon}</div>
-                <h3 style={{ fontSize: "1.2rem", color: "#1a3a52", marginBottom: "0.75rem" }}>
+                <h3 style={{ fontSize: "1.2rem", color: "#ff6600", marginBottom: "0.75rem" }}>
                   {benefit.title}
                 </h3>
                 <p style={{ color: "#666", fontSize: "0.95rem" }}>{benefit.description}</p>
@@ -306,7 +306,7 @@ export default function LoyaltyPage() {
           {/* Points Value */}
           <Card
             style={{
-              background: "linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%)",
+              background: "linear-gradient(135deg, #ff6600 0%, #cc5200 100%)",
               color: "#fff",
               padding: "3rem",
               textAlign: "center",
@@ -338,7 +338,7 @@ export default function LoyaltyPage() {
 
           {/* CTA */}
           <div style={{ textAlign: "center" }}>
-            <h2 style={{ fontSize: "2rem", color: "#1a3a52", marginBottom: "1.5rem" }}>
+            <h2 style={{ fontSize: "2rem", color: "#ff6600", marginBottom: "1.5rem" }}>
               Ready to Start Earning?
             </h2>
             <p style={{ fontSize: "1.1rem", color: "#666", marginBottom: "2rem" }}>

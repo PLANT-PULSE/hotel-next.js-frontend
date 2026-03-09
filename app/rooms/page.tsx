@@ -18,10 +18,10 @@ const rooms = [
     maxGuests: 2,
     bedType: "King Bed",
     images: [
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1540932239986-310128078ceb?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=500&fit=crop",
+      "/images/download (14).jpeg",
+      "/images/download (15).jpeg",
+      "/images/images (1).jpeg",
+      "/images/images (2).jpeg",
     ],
     features: ["Free WiFi", "Smart TV", "Mini Bar", "Safe", "Air Conditioning", "Room Service"],
     amenities: ["City View", "Work Desk", "Coffee Maker", "Hairdryer", "Iron"],
@@ -35,10 +35,10 @@ const rooms = [
     maxGuests: 3,
     bedType: "King Bed",
     images: [
-      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=500&fit=crop",
+      "/images/download (16).jpeg",
+      "/images/download (17).jpeg",
+      "/images/images (3).jpeg",
+      "/images/images (4).jpeg",
     ],
     features: ["Free WiFi", "Smart TV", "Mini Bar", "Safe", "Air Conditioning", "Room Service", "Spa Bath", "Balcony"],
     amenities: ["Panoramic View", "Work Desk", "Nespresso Machine", "Premium Toiletries", "Bathrobes", "Slippers"],
@@ -52,10 +52,10 @@ const rooms = [
     maxGuests: 4,
     bedType: "King Bed",
     images: [
-      "https://images.unsplash.com/photo-1591088398332-8a7791972843?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800&h=500&fit=crop",
+      "/images/download (18).jpeg",
+      "/images/download (19).jpeg",
+      "/images/images (5).jpeg",
+      "/images/images.jpeg",
     ],
     features: ["Butler Service", "Executive Lounge", "Free WiFi", "Smart TV", "Mini Bar", "Spa Bath", "Balcony", "Living Room"],
     amenities: ["Panoramic View", "Work Desk", "Nespresso Machine", "Premium Toiletries", "Bathrobes", "Slippers", "Welcome Amenities"],
@@ -69,10 +69,10 @@ const rooms = [
     maxGuests: 6,
     bedType: "King Bed",
     images: [
-      "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=500&fit=crop",
+      "/images/download (20).jpeg",
+      "/images/download (21).jpeg",
+      "/images/download (22).jpeg",
+      "/images/download (23).jpeg",
     ],
     features: ["Personal Chef", "Private Terrace", "Home Theater", "Jacuzzi", "Butler Service", "Private Pool", "Wine Cellar", "Piano"],
     amenities: ["360° View", "Dining Room", "Full Kitchen", "Premium Toiletries", "Spa Credits", "Airport Transfer", "24/7 Concierge"],
@@ -107,7 +107,7 @@ export default function RoomsPage() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=1600&h=900&fit=crop"
+          src="/images/download (1).jpeg"
           alt="Luxury Rooms"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -118,8 +118,7 @@ export default function RoomsPage() {
             left: 0,
             width: "100%",
             height: "100%",
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7))",
-            display: "flex",
+            background: "linear-gradient(to bottom, rgba(255,102,0,0.4), rgba(255,102,0,0.7))",            display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
@@ -162,9 +161,9 @@ export default function RoomsPage() {
                     fontSize: "1rem",
                     fontWeight: 600,
                     background: "#fff",
-                    border: "2px solid #1a3a52",
+                    border: "2px solid #ff6600",
                     borderRadius: "8px",
-                    color: "#1a3a52",
+                    color: "#ff6600",
                   }}
                 >
                   {room.name}
@@ -322,7 +321,7 @@ export default function RoomsPage() {
 
                   {/* Room Details */}
                   <div>
-                    <h2 style={{ fontSize: "2.5rem", color: "#1a3a52", marginBottom: "1rem" }}>
+                    <h2 style={{ fontSize: "2.5rem", color: "#ff6600", marginBottom: "1rem" }}>
                       {room.name}
                     </h2>
                     <p style={{ fontSize: "1.1rem", color: "#666", lineHeight: 1.8, marginBottom: "2rem" }}>
@@ -341,12 +340,12 @@ export default function RoomsPage() {
                       <div style={{ background: "#fff", padding: "1rem", borderRadius: "8px", textAlign: "center" }}>
                         <div style={{ fontSize: "1.5rem", marginBottom: "0.25rem" }}>👥</div>
                         <div style={{ fontSize: "0.9rem", color: "#666" }}>Max Guests</div>
-                        <div style={{ fontWeight: "bold", color: "#1a3a52" }}>{room.maxGuests}</div>
+                        <div style={{ fontWeight: "bold", color: "#ff6600" }}>{room.maxGuests}</div>
                       </div>
                       <div style={{ background: "#fff", padding: "1rem", borderRadius: "8px", textAlign: "center" }}>
                         <div style={{ fontSize: "1.5rem", marginBottom: "0.25rem" }}>🛏️</div>
                         <div style={{ fontSize: "0.9rem", color: "#666" }}>Bed Type</div>
-                        <div style={{ fontWeight: "bold", color: "#1a3a52" }}>{room.bedType}</div>
+                        <div style={{ fontWeight: "bold", color: "#ff6600" }}>{room.bedType}</div>
                       </div>
                     </div>
 
@@ -406,7 +405,7 @@ export default function RoomsPage() {
                         </div>
                         <Button
                           style={{
-                            background: "#d4af37",
+                            background: "#ff6600",
                             color: "#1a3a52",
                             padding: "1rem 2rem",
                             fontSize: "1.1rem",
@@ -428,7 +427,7 @@ export default function RoomsPage() {
           </Tabs>
 
           {/* All Rooms Grid */}
-          <h2 style={{ textAlign: "center", fontSize: "2.5rem", color: "#1a3a52", marginBottom: "50px" }}>
+          <h2 style={{ textAlign: "center", fontSize: "2.5rem", color: "#ff6600", marginBottom: "50px" }}>
             All Accommodations
           </h2>
           <div
@@ -473,7 +472,7 @@ export default function RoomsPage() {
                     <span style={{ fontSize: "1.3rem", color: "#d4af37", fontWeight: "bold" }}>
                       ${room.price}<span style={{ fontSize: "0.9rem", color: "#666" }}>/night</span>
                     </span>
-                    <Button variant="outline" style={{ borderColor: "#1a3a52", color: "#1a3a52" }}>
+                    <Button variant="outline" style={{ borderColor: "#ff6600", color: "#ff6600" }}>
                       View Details
                     </Button>
                   </div>

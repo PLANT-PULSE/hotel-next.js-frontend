@@ -44,7 +44,7 @@ export default function ContactPage() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&h=900&fit=crop"
+          src="/images/download (3).jpeg"
           alt="Contact Us"
           style={{ width: "100%", height: "100%", objectFit: "cover" }}
         />
@@ -94,10 +94,10 @@ export default function ContactPage() {
             ].map((item, idx) => (
               <Card key={idx} style={{ textAlign: "center", padding: "1.5rem" }}>
                 <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{item.icon}</div>
-                <h3 style={{ fontSize: "1.1rem", color: "#1a3a52", marginBottom: "0.5rem" }}>{item.title}</h3>
+                <h3 style={{ fontSize: "1.1rem", color: "#ff6600", marginBottom: "0.5rem" }}>{item.title}</h3>
                 <p style={{ color: "#666", margin: 0 }}>{item.content}</p>
                 {item.sub && (
-                  <Badge style={{ marginTop: "0.5rem", background: "#d4af37", color: "#1a3a52" }}>
+                  <Badge style={{ marginTop: "0.5rem", background: "#ff6600", color: "#fff" }}>
                     {item.sub}
                   </Badge>
                 )}
@@ -117,19 +117,19 @@ export default function ContactPage() {
             {/* Contact Form */}
             <Card style={{ padding: "2rem" }}>
               <CardHeader>
-                <CardTitle style={{ fontSize: "2rem", color: "#1a3a52" }}>Send Us a Message</CardTitle>
+                <CardTitle style={{ fontSize: "2rem", color: "#ff6600" }}>Send Us a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 {submitted ? (
                   <div style={{ textAlign: "center", padding: "2rem" }}>
                     <div style={{ fontSize: "4rem", marginBottom: "1rem" }}>✅</div>
-                    <h3 style={{ color: "#1a3a52", marginBottom: "0.5rem" }}>Message Sent!</h3>
+                    <h3 style={{ color: "#ff6600", marginBottom: "0.5rem" }}>Message Sent!</h3>
                     <p style={{ color: "#666" }}>
                       Thank you for reaching out. We'll get back to you within 24 hours.
                     </p>
                     <Button
                       onClick={() => setSubmitted(false)}
-                      style={{ marginTop: "1.5rem", background: "#1a3a52", color: "#fff" }}
+                      style={{ marginTop: "1.5rem", background: "#ff6600", color: "#fff" }}
                     >
                       Send Another Message
                     </Button>
@@ -272,7 +272,7 @@ export default function ContactPage() {
               <div
                 style={{
                   height: "300px",
-                  background: "linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%)",
+                  background: "linear-gradient(135deg, #ff6600 0%, #cc5200 100%)",
                   borderRadius: "16px",
                   display: "flex",
                   alignItems: "center",
@@ -286,8 +286,8 @@ export default function ContactPage() {
                 <p style={{ fontSize: "1.2rem" }}>View on Google Maps</p>
                 <Button
                   style={{
-                    background: "#d4af37",
-                    color: "#1a3a52",
+                    background: "#ff6600",
+                    color: "#fff",
                     marginTop: "1rem",
                     fontWeight: "bold",
                   }}
@@ -299,7 +299,7 @@ export default function ContactPage() {
               {/* Department Contacts */}
               <Card style={{ padding: "2rem" }}>
                 <CardHeader>
-                  <CardTitle style={{ fontSize: "1.5rem", color: "#1a3a52" }}>Department Contacts</CardTitle>
+                  <CardTitle style={{ fontSize: "1.5rem", color: "#ff6600" }}>Department Contacts</CardTitle>
                 </CardHeader>
                 <CardContent>
                   {[
@@ -315,7 +315,7 @@ export default function ContactPage() {
                         borderBottom: idx < 3 ? "1px solid #f0f0f0" : "none",
                       }}
                     >
-                      <h4 style={{ color: "#1a3a52", marginBottom: "0.5rem" }}>{item.dept}</h4>
+                      <h4 style={{ color: "#ff6600", marginBottom: "0.5rem" }}>{item.dept}</h4>
                       <p style={{ color: "#666", margin: 0, fontSize: "0.9rem" }}>✉️ {item.email}</p>
                       <p style={{ color: "#666", margin: 0, fontSize: "0.9rem" }}>📞 {item.phone}</p>
                     </div>
@@ -326,7 +326,7 @@ export default function ContactPage() {
           </div>
 
           {/* Social Media Section */}
-          <Card style={{ padding: "3rem", textAlign: "center", background: "linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%)", color: "#fff" }}>
+          <Card style={{ padding: "3rem", textAlign: "center", background: "linear-gradient(135deg, #ff6600 0%, #cc5200 100%)", color: "#fff" }}>
             <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Follow Us</h2>
             <p style={{ fontSize: "1.2rem", marginBottom: "2rem", opacity: 0.9 }}>
               Stay connected with us on social media for latest updates and offers

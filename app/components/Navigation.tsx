@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
   { name: "Home", href: "/" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Rooms", href: "/rooms" },
   { name: "Events", href: "/events" },
   { name: "Loyalty", href: "/loyalty" },
@@ -32,7 +34,7 @@ export default function Navigation() {
         position: "fixed",
         top: 0,
         width: "100%",
-        background: scrolled ? "rgba(26, 58, 82, 0.95)" : "#1a3a52",
+        background: scrolled ? "rgba(255, 102, 0, 0.95)" : "#ff6600",
         color: "#fff",
         padding: scrolled ? "0.75rem 0" : "1rem 0",
         zIndex: 1000,
@@ -55,17 +57,32 @@ export default function Navigation() {
         <Link href="/" style={{ textDecoration: "none" }}>
           <div
             style={{
-              fontSize: "1.8rem",
-              letterSpacing: "3px",
-              color: "#d4af37",
-              fontWeight: "bold",
               display: "flex",
               alignItems: "center",
-              gap: "0.5rem",
+              gap: "0.75rem",
             }}
           >
-            <span style={{ fontSize: "2rem" }}>✦</span>
-            LuxeStay
+            <Image
+              src="/images/logo.jpeg"
+              alt="LuxeStay Hotel Logo"
+              width={50}
+              height={50}
+              style={{
+                objectFit: "contain",
+                borderRadius: "8px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+              }}
+            />
+            <span
+              style={{
+                fontSize: "1.5rem",
+                letterSpacing: "3px",
+                color: "#fff",
+                fontWeight: "bold",
+              }}
+            >
+              LuxeStay
+            </span>
           </div>
         </Link>
 
@@ -84,7 +101,7 @@ export default function Navigation() {
               <Link
                 href={item.href}
                 style={{
-                  color: pathname === item.href ? "#d4af37" : "#fff",
+                  color: pathname === item.href ? "#fff" : "#fff",
                   textDecoration: "none",
                   fontWeight: 500,
                   fontSize: "0.95rem",
@@ -104,7 +121,7 @@ export default function Navigation() {
                       left: 0,
                       width: "100%",
                       height: "2px",
-                      background: "#d4af37",
+                      background: "#fff",
                     }}
                   />
                 )}
@@ -118,8 +135,8 @@ export default function Navigation() {
           <Link href="/rooms">
             <Button
               style={{
-                background: "#d4af37",
-                color: "#1a3a52",
+                background: "#fff",
+                color: "#ff6600",
                 padding: "0.6rem 1.5rem",
                 fontSize: "0.9rem",
                 fontWeight: "bold",
@@ -159,7 +176,7 @@ export default function Navigation() {
             top: "100%",
             left: 0,
             width: "100%",
-            background: "#1a3a52",
+            background: "#ff6600",
             padding: "1rem",
             boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
           }}
@@ -172,7 +189,7 @@ export default function Navigation() {
               style={{
                 display: "block",
                 padding: "1rem",
-                color: pathname === item.href ? "#d4af37" : "#fff",
+                color: pathname === item.href ? "#fff" : "#fff",
                 textDecoration: "none",
                 fontWeight: 500,
               }}
