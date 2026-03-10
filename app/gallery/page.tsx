@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { motion, AnimatePresence } from "framer-motion";
@@ -201,6 +201,48 @@ export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroSlides = [
+    {
+      src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1920&h=1080&fit=crop",
+      alt: "Hotel Exterior",
+      title: "Welcome to LuxeStay",
+      subtitle: "Experience Luxury Redefined"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1920&h=1080&fit=crop",
+      alt: "Swimming Pool",
+      title: "Stunning Pool",
+      subtitle: "Relax in Our Tropical Paradise"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=1920&h=1080&fit=crop",
+      alt: "Pool View",
+      title: "Poolside Luxury",
+      subtitle: "Unwind in Style"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1920&h=1080&fit=crop",
+      alt: "Resort Pool",
+      title: "Resort Living",
+      subtitle: "Your Private Oasis"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&h=1080&fit=crop",
+      alt: "Grand Entrance",
+      title: "Elegant Spaces",
+      subtitle: "Where Luxury Meets Comfort"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroSlides.length]);
+
   const filteredImages = activeCategory === "all"
     ? galleryImages
     : galleryImages.filter(img => img.category === activeCategory);
@@ -208,11 +250,72 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <Navigation />
-      <div className="pt-16">
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-amber-600/10 via-amber-500/5 to-amber-600/10" />
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Hero Slider Section */}
+      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+        {/* Slides */}
+        {heroSlides.map((slide, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: index === currentSlide ? 1 : 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0"
+          >
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: index === currentSlide ? 1 : 0, y: index === currentSlide ? 0 : 30 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-center text-white px-4"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">{slide.title}</h1>
+                <p className="text-xl md:text-2xl font-light drop-shadow-md">{slide.subtitle}</p>
+              </motion.div>
+            </div>
+          </motion.div>
+        ))}
+
+        {/* Navigation Arrows */}
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length)}
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button
+          onClick={() => setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 hover:bg-white/40 rounded-full flex items-center justify-center transition-colors backdrop-blur-sm"
+        >
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        {/* Dots */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? "bg-amber-500 w-8" : "bg-white/50 hover:bg-white/80"
+              }`}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* Gallery Title */}
+      <section className="py-12 bg-gradient-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -222,9 +325,9 @@ export default function GalleryPage() {
             <Badge className="mb-4 bg-amber-100 text-amber-800 hover:bg-amber-200">
               Explore Our Property
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-amber-700 via-amber-600 to-amber-800 bg-clip-text text-transparent">
               Photo Gallery
-            </h1>
+            </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Discover the beauty and luxury of LuxeStay Hotel through our curated collection of stunning photographs
             </p>
@@ -390,7 +493,6 @@ export default function GalleryPage() {
           </motion.div>
         </div>
       </section>
-      </div>
       <Footer />
     </div>
   );

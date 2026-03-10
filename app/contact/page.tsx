@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -70,6 +71,41 @@ export default function ContactPage() {
           <p style={{ fontSize: "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
             We're here to help - reach out to us anytime
           </p>
+        </div>
+      </section>
+
+      {/* Google Maps Section */}
+      <section style={{ height: "400px", position: "relative" }}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7152203584364!2d-118.4003548!3d34.0736204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147d9%3A0x29a9751103a5f3d1!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1645564723421!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{ border: 0, filter: "grayscale(20%) contrast(1.1)" }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: "20px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            background: "#1a3a52",
+            color: "#fff",
+            padding: "1rem 2rem",
+            borderRadius: "8px",
+            boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
+            display: "flex",
+            alignItems: "center",
+            gap: "1rem",
+          }}
+        >
+          <span style={{ fontSize: "1.5rem" }}>📍</span>
+          <div>
+            <p style={{ margin: 0, fontWeight: "bold" }}>LuxeStay Hotel Beverly Hills</p>
+            <p style={{ margin: 0, fontSize: "0.9rem", opacity: 0.8 }}>123 Luxury Avenue, Beverly Hills, CA 90210</p>
+          </div>
         </div>
       </section>
 
