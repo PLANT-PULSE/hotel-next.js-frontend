@@ -19,8 +19,8 @@ const rooms = [
     bedType: "King Bed",
     images: [
       "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1540932239986-310128078ceb?w=800&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1578646970236-584b5603d82d?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=800&h=500&fit=crop",
+      "https://images.unsplash.com/photo-1584132967334-10e028bd69f7?w=800&h=500&fit=crop",
       "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&h=500&fit=crop",
     ],
     features: ["Free WiFi", "Smart TV", "Mini Bar", "Safe", "Air Conditioning", "Room Service"],
@@ -293,29 +293,36 @@ export default function RoomsPage() {
                     {/* Thumbnail Strip */}
                     <div
                       style={{
-                        display: "flex",
+                        display: "grid",
+                        gridTemplateColumns: "repeat(4, 1fr)",
                         gap: "10px",
                         marginTop: "15px",
-                        overflowX: "auto",
                       }}
                     >
                       {room.images.map((img, idx) => (
-                        <img
+                        <div
                           key={idx}
-                          src={img}
-                          alt={`Thumbnail ${idx + 1}`}
                           onClick={() => setActiveImageIndex(idx)}
                           style={{
-                            width: "100px",
-                            height: "70px",
-                            objectFit: "cover",
-                            borderRadius: "8px",
                             cursor: "pointer",
+                            borderRadius: "8px",
+                            overflow: "hidden",
                             border: idx === activeImageIndex ? "3px solid #d4af37" : "3px solid transparent",
                             transition: "all 0.3s ease",
                             opacity: idx === activeImageIndex ? 1 : 0.7,
                           }}
-                        />
+                        >
+                          <img
+                            src={img}
+                            alt={`Thumbnail ${idx + 1}`}
+                            style={{
+                              width: "100%",
+                              height: "80px",
+                              objectFit: "cover",
+                              display: "block",
+                            }}
+                          />
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -405,6 +412,7 @@ export default function RoomsPage() {
                           </div>
                         </div>
                         <Button
+                          onClick={() => window.open("https://hotel-mgt-sys.vercel.app/index.html", "_blank")}
                           style={{
                             background: "#d4af37",
                             color: "#1a3a52",

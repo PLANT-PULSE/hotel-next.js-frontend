@@ -149,7 +149,7 @@ export default function Navigation() {
               )}
             </button>
           )}
-          <Link href="/rooms">
+          <Link href="https://hotel-mgt-sys.vercel.app/index.html" target="_blank" rel="noopener noreferrer">
             <Button
               style={{
                 background: "#d4af37",

@@ -170,6 +170,7 @@ export default function Home() {
                 {slide.subtitle}
               </p>
               <Button
+                onClick={() => window.open("https://hotel-mgt-sys.vercel.app/index.html", "_blank")}
                 style={{
                   background: "#d4af37",
                   color: "#1a3a52",
@@ -400,11 +401,12 @@ export default function Home() {
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "3rem" }}>
-            <Link href="/rooms">
-              <Button style={{ background: "#1a3a52", color: "#fff", padding: "1rem 3rem", fontSize: "1rem" }}>
-                View All Rooms
-              </Button>
-            </Link>
+            <Button 
+              onClick={() => window.open("https://hotel-mgt-sys.vercel.app/index.html", "_blank")}
+              style={{ background: "#1a3a52", color: "#fff", padding: "1rem 3rem", fontSize: "1rem" }}
+            >
+              View All Rooms
+            </Button>
           </div>
         </div>
       </section>
