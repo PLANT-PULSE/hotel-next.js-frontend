@@ -154,7 +154,7 @@ export default function Home() {
             >
               <h2 
                 style={{ 
-                  fontSize: "4rem", 
+                  fontSize: isMobile ? "2rem" : "4rem", 
                   marginBottom: "1rem", 
                   textShadow: "2px 2px 4px rgba(0,0,0,0.5)",
                   opacity: index === currentSlide ? 1 : 0,
@@ -166,7 +166,7 @@ export default function Home() {
               </h2>
               <p 
                 style={{ 
-                  fontSize: "1.8rem", 
+                  fontSize: isMobile ? "1rem" : "1.8rem", 
                   marginBottom: "2rem", 
                   textShadow: "1px 1px 3px rgba(0,0,0,0.5)",
                   opacity: index === currentSlide ? 1 : 0,

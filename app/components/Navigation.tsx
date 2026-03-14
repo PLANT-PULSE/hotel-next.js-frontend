@@ -59,7 +59,7 @@ export default function Navigation() {
         style={{
           maxWidth: 1400,
           margin: "0 auto",
-          padding: "0 2rem",
+          padding: isMobile ? "0 1rem" : "0 2rem",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -71,15 +71,15 @@ export default function Navigation() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "0.75rem",
+              gap: isMobile ? "0.5rem" : "0.75rem",
             }}
           >
             <img 
               src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=100&h=100&fit=crop" 
               alt="LuxeStay Logo"
               style={{
-                width: "45px",
-                height: "45px",
+                width: isMobile ? "35px" : "45px",
+                height: isMobile ? "35px" : "45px",
                 borderRadius: "50%",
                 objectFit: "cover",
                 border: "2px solid #d4af37",
@@ -88,7 +88,7 @@ export default function Navigation() {
             <div>
               <div
                 style={{
-                  fontSize: "1.5rem",
+                  fontSize: isMobile ? "1.2rem" : "1.5rem",
                   letterSpacing: "2px",
                   color: "#d4af37",
                   fontWeight: "bold",
@@ -97,9 +97,11 @@ export default function Navigation() {
               >
                 LuxeStay
               </div>
-              <div style={{ fontSize: "0.6rem", color: "#fff", letterSpacing: "3px", textTransform: "uppercase" }}>
-                Hotel & Resort
-              </div>
+              {!isMobile && (
+                <div style={{ fontSize: "0.6rem", color: "#fff", letterSpacing: "3px", textTransform: "uppercase" }}>
+                  Hotel & Resort
+                </div>
+              )}
             </div>
           </div>
         </Link>

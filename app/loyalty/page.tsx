@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -89,6 +89,16 @@ const howItWorks = [
 
 export default function LoyaltyPage() {
   const [selectedTier, setSelectedTier] = useState(loyaltyTiers[1]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
@@ -97,7 +107,7 @@ export default function LoyaltyPage() {
       {/* Hero Section */}
       <section
         style={{
-          height: "60vh",
+          height: isMobile ? "40vh" : "60vh",
           position: "relative",
           marginTop: 60,
           overflow: "hidden",
@@ -122,28 +132,29 @@ export default function LoyaltyPage() {
             alignItems: "center",
             color: "#fff",
             textAlign: "center",
+            padding: isMobile ? "0 1rem" : "0 2rem",
           }}
         >
-          <h1 style={{ fontSize: "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
+          <h1 style={{ fontSize: isMobile ? "2rem" : "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
             LuxeStay Rewards
           </h1>
-          <p style={{ fontSize: "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
+          <p style={{ fontSize: isMobile ? "1rem" : "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
             Unlock exclusive benefits and earn rewards with every stay
           </p>
         </div>
       </section>
 
       {/* How It Works */}
-      <section style={{ padding: "80px 0", background: "#fff" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
-          <h2 style={{ textAlign: "center", fontSize: "2.5rem", color: "#1a3a52", marginBottom: "50px" }}>
+      <section style={{ padding: isMobile ? "40px 0" : "80px 0", background: "#fff" }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "0 1rem" : "0 2rem" }}>
+          <h2 style={{ textAlign: "center", fontSize: isMobile ? "1.5rem" : "2.5rem", color: "#1a3a52", marginBottom: isMobile ? "30px" : "50px" }}>
             How It Works
           </h2>
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: "2rem",
+              gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
+              gap: isMobile ? "1rem" : "2rem",
             }}
           >
             {howItWorks.map((item, idx) => (

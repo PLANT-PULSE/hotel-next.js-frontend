@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -100,6 +100,16 @@ const events = [
 
 export default function EventsPage() {
   const [selectedEvent, setSelectedEvent] = useState(events[0]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div style={{ fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif", minHeight: "100vh", display: "flex", flexDirection: "column" }}>
@@ -108,7 +118,7 @@ export default function EventsPage() {
       {/* Hero Section */}
       <section
         style={{
-          height: "60vh",
+          height: isMobile ? "40vh" : "60vh",
           position: "relative",
           marginTop: 60,
           overflow: "hidden",
@@ -133,20 +143,21 @@ export default function EventsPage() {
             alignItems: "center",
             color: "#fff",
             textAlign: "center",
+            padding: isMobile ? "0 1rem" : "0 2rem",
           }}
         >
-          <h1 style={{ fontSize: "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
+          <h1 style={{ fontSize: isMobile ? "2rem" : "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
             Events & Conferences
           </h1>
-          <p style={{ fontSize: "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
+          <p style={{ fontSize: isMobile ? "1rem" : "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
             Create unforgettable memories in our stunning event spaces
           </p>
         </div>
       </section>
 
       {/* Event Categories */}
-      <section style={{ padding: "80px 0", background: "#f8f9fa", flex: 1 }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
+      <section style={{ padding: isMobile ? "40px 0" : "80px 0", background: "#f8f9fa", flex: 1 }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "0 1rem" : "0 2rem" }}>
           
           {/* Event Type Selection */}
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", marginBottom: "50px", flexWrap: "wrap" }}>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -82,7 +82,17 @@ const rooms = [
 export default function RoomsPage() {
   const [selectedRoom, setSelectedRoom] = useState(rooms[0]);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const tabsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleViewDetails = (roomId: string) => {
     const room = rooms.find(r => r.id === roomId);
@@ -111,7 +121,7 @@ export default function RoomsPage() {
       {/* Hero Section */}
       <section
         style={{
-          height: "60vh",
+          height: isMobile ? "40vh" : "60vh",
           position: "relative",
           marginTop: 60,
           overflow: "hidden",
@@ -136,20 +146,21 @@ export default function RoomsPage() {
             alignItems: "center",
             color: "#fff",
             textAlign: "center",
+            padding: isMobile ? "0 1rem" : "0 2rem",
           }}
         >
-          <h1 style={{ fontSize: "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
+          <h1 style={{ fontSize: isMobile ? "2rem" : "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
             Luxurious Rooms & Suites
           </h1>
-          <p style={{ fontSize: "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
+          <p style={{ fontSize: isMobile ? "1rem" : "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
             Experience unparalleled comfort in our beautifully appointed accommodations
           </p>
         </div>
       </section>
 
       {/* Room Selection */}
-      <section style={{ padding: "80px 0", background: "#f8f9fa", flex: 1 }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
+      <section style={{ padding: isMobile ? "40px 0" : "80px 0", background: "#f8f9fa", flex: 1 }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", padding: isMobile ? "0 1rem" : "0 2rem" }}>
           
           {/* Room Tabs */}
           <Tabs value={selectedRoom.id} ref={tabsRef} onValueChange={(value) => {
@@ -162,9 +173,12 @@ export default function RoomsPage() {
             <TabsList style={{ 
               display: "flex", 
               justifyContent: "center", 
-              gap: "1rem", 
+              gap: isMobile ? "0.5rem" : "1rem", 
               background: "transparent",
-              marginBottom: "2rem"
+              marginBottom: "2rem",
+              flexWrap: isMobile ? "wrap" : "nowrap",
+              overflowX: isMobile ? "auto" : "visible",
+              padding: isMobile ? "0.5rem" : "0",
             }}>
               {rooms.map((room) => (
                 <TabsTrigger
@@ -194,8 +208,8 @@ export default function RoomsPage() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "1.5fr 1fr",
-                    gap: "3rem",
+                    gridTemplateColumns: isMobile ? "1fr" : "1.5fr 1fr",
+                    gap: isMobile ? "1.5rem" : "3rem",
                     alignItems: "start",
                   }}
                 >

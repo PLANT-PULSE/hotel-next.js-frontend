@@ -1,16 +1,27 @@
 "use client";
 
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <footer
       style={{
         background: "#1a3a52",
         color: "#fff",
-        padding: "60px 0 30px",
+        padding: isMobile ? "40px 0 20px" : "60px 0 30px",
         marginTop: "auto",
       }}
     >
@@ -18,7 +29,7 @@ export default function Footer() {
         style={{
           maxWidth: 1400,
           margin: "0 auto",
-          padding: "0 2rem",
+          padding: isMobile ? "0 1rem" : "0 2rem",
         }}
       >
         <div

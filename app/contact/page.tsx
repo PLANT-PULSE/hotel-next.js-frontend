@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -18,6 +18,16 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -38,7 +48,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section
         style={{
-          height: "50vh",
+          height: isMobile ? "35vh" : "50vh",
           position: "relative",
           marginTop: 60,
           overflow: "hidden",
@@ -63,19 +73,20 @@ export default function ContactPage() {
             alignItems: "center",
             color: "#fff",
             textAlign: "center",
+            padding: isMobile ? "0 1rem" : "0 2rem",
           }}
         >
-          <h1 style={{ fontSize: "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
+          <h1 style={{ fontSize: isMobile ? "2rem" : "4rem", marginBottom: "1rem", textShadow: "2px 2px 4px rgba(0,0,0,0.5)" }}>
             Contact Us
           </h1>
-          <p style={{ fontSize: "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
+          <p style={{ fontSize: isMobile ? "1rem" : "1.5rem", maxWidth: "600px", textShadow: "1px 1px 3px rgba(0,0,0,0.5)" }}>
             We're here to help - reach out to us anytime
           </p>
         </div>
       </section>
 
       {/* Google Maps Section */}
-      <section style={{ height: "400px", position: "relative" }}>
+      <section style={{ height: isMobile ? "250px" : "400px", position: "relative" }}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7152203584364!2d-118.4003548!3d34.0736204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147d9%3A0x29a9751103a5f3d1!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1645564723421!5m2!1sen!2sus"
           width="100%"
