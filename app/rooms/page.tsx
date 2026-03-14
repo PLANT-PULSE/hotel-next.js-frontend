@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import { Button } from "@/components/ui/button";
@@ -82,6 +82,17 @@ const rooms = [
 export default function RoomsPage() {
   const [selectedRoom, setSelectedRoom] = useState(rooms[0]);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const tabsRef = useRef<HTMLDivElement>(null);
+
+  const handleViewDetails = (roomId: string) => {
+    const room = rooms.find(r => r.id === roomId);
+    if (room) {
+      setSelectedRoom(room);
+      setActiveImageIndex(0);
+      // Scroll to the tabs section
+      tabsRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   const nextImage = () => {
     setActiveImageIndex((prev) => (prev + 1) % selectedRoom.images.length);
@@ -141,7 +152,13 @@ export default function RoomsPage() {
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 2rem" }}>
           
           {/* Room Tabs */}
-          <Tabs defaultValue={rooms[0].id} style={{ marginBottom: "60px" }}>
+          <Tabs value={selectedRoom.id} ref={tabsRef} onValueChange={(value) => {
+            const room = rooms.find(r => r.id === value);
+            if (room) {
+              setSelectedRoom(room);
+              setActiveImageIndex(0);
+            }
+          }} style={{ marginBottom: "60px" }}>
             <TabsList style={{ 
               display: "flex", 
               justifyContent: "center", 
@@ -450,6 +467,7 @@ export default function RoomsPage() {
               <Card
                 key={room.id}
                 style={{ overflow: "hidden", cursor: "pointer", transition: "transform 0.3s ease, box-shadow 0.3s ease" }}
+                onClick={() => handleViewDetails(room.id)}
               >
                 <div style={{ position: "relative", height: 220, overflow: "hidden" }}>
                   <img
@@ -481,7 +499,11 @@ export default function RoomsPage() {
                     <span style={{ fontSize: "1.3rem", color: "#d4af37", fontWeight: "bold" }}>
                       ${room.price}<span style={{ fontSize: "0.9rem", color: "#666" }}>/night</span>
                     </span>
-                    <Button variant="outline" style={{ borderColor: "#1a3a52", color: "#1a3a52" }}>
+                    <Button 
+                      variant="outline" 
+                      style={{ borderColor: "#1a3a52", color: "#1a3a52" }}
+                      onClick={() => handleViewDetails(room.id)}
+                    >
                       View Details
                     </Button>
                   </div>
